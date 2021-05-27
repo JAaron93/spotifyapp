@@ -16,12 +16,12 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Get a song suggested to you!
+            ## Have a song suggested to you!
 
-            Are you tired of listening to the same couple of songs?
+            Tired of listening to the same couple of tracks?
 
-            This app will take songs/artitst you have already listened to and return a song 
-            you might like based on your previous songs played.
+            This app will take songs & artists you have already listened to and return a song 
+            you might like based on your listening history.
 
             """
         ),

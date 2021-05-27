@@ -35,7 +35,7 @@ footer = dbc.Container(
         dbc.Col(
             html.P(
                 [
-                    html.Span('Nicole Reinke, Joshua Elamin, Michael Carrier, and Andrwe Haney', className='mr-2'), 
+                    html.Span('Nicole Reinke, Joshua Elamin, Michael Carrier, and Andrew Haney', className='mr-2'), 
                     html.A(html.I(className='fab fa-github-square mr-1'), href='https://github.com/Spotify-Build-Week-FTDS/Spotifyapp')
                 ], 
                 className='lead'
