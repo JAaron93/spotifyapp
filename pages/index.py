@@ -16,17 +16,16 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Your Value Proposition
+            ## Get a song suggested to you!
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
+            Are you tired of listening to the same couple of songs?
 
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
-
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+            This app will take songs/artitst you have already listened to and return a song 
+            you might like based on your previous songs played.
 
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Get A Song!', color='primary'), href='/predictions')
     ],
     md=4,
 )
