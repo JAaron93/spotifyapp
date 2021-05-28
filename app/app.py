@@ -2,6 +2,8 @@ from flask import Flask, render_template
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials #To access authorised Spotify data
 import requests
+from joblib import load
+from os.path import dirname
 
 cid = '6d40450899dc48c2b04ea25ef23a0cf0'
 secret = '787f733975e64f62ab5463b3e658c613'
@@ -10,8 +12,24 @@ client_secret = secret
 client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager) #spotify object to access API
 
-app = Flask(__name__, static_folder='/assets')
 
+# Loading in knn predictive model
+dir = dirname(__file__)
+
+models_dir = dir + '/../models/'
+
+model_filename = model_dir + 'knn_joblib_model3'
+
+loaded_model = None
+
+def load_file():
+    loaded_model = load(model_filename)
+    print('File loaded')
+
+load_file()
+
+
+app = Flask(__name__, static_folder='/assets')
 
 @app.route('/')
 def root():

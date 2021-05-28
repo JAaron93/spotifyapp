@@ -21,6 +21,7 @@ tensor = "*"
 flow = "*"
 keras = "*"
 spacy = "*"
+joblib = "*"
 
 [requires]
 python_version = "3"
